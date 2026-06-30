@@ -1,9 +1,15 @@
 import requests
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
 
 url = "https://v3.football.api-sports.io/teams"
 
 headers = {
-    "x-apisports-key": "9bc2879e2e949b1680c9f0581a5b3b48"
+    "x-apisports-key": API_KEY
 }
 
 def buscar_time():
